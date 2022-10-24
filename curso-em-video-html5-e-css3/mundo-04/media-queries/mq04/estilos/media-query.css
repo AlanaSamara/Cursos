@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+/* Todas as demais mídias */
+
+/* Typical Device Breakpoints
+-----------------------------
+Pequenas telas: até 320px
+Celular: de 320px até 812px
+Tablet: de 768px até 1112px
+Desktop: de 1366px até 1920px
+Grandes telas: acima de 1920px
+*/
+
+@media print{ /* IMPRESSÃO */
+  *{
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  body{
+    background-image: url(../img/back-print.jpg); /* desnecessário*/
+  }
+
+  main{
+    width: 90vw;
+    border: 1px solid rgba(0, 0, 0, 0.753);
+  }
+
+  main::after{
+    content: 'Essa impressão foi feita no site www.com.br';
+    text-decoration: underline;
+  }
+
+  main h1{
+    text-shadow: none;
+    color: black;
+  }
+
+  .phone{ display: none;}
+  .tablet{ display: none;}
+  .print{ 
+    display: block;
+    padding-bottom: 20px ;
+  }
+  .pc{ display: none;}
+  .tv{ display: none;}
+
+}
+
+@media screen and (min-width: 812px) and (max-width: 1112px) { /* TABLET */
+  body{
+    background-image: url(../img/back-tablet.jpg);
+  }
+
+  .phone{ display: none;}
+  .tablet{ display: block;}
+  .print{ display: none;}
+  .pc{ display: none;}
+  .tv{ display: none;}
+}
+
+@media screen and (min-width: 1112px) and (max-width: 1300px){ /* DESKTOP */
+  body{
+    background-image: url(../img/back-pc.jpg);
+  }
+
+  .phone{ display: none;}
+  .tablet{ display: none;}
+  .print{ display: none;}
+  .pc{ display: block;}
+  .tv{ display: none;}
+}
+
+@media screen  and (min-width:1300px) { /* GRANDES TELAS */
+  body{
+    background-image: url(../img/back-tv.jpg);
+  }
+
+  .phone{ display: none;}
+  .tablet{ display: none;}
+  .print{ display: none;}
+  .pc{ display: none;}
+  .tv{ display: block;}
+}

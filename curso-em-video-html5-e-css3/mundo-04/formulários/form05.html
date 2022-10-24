@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+  <style>
+    *{
+    margin: 0px;
+    padding: 0px;
+    }
+    
+    fieldset{
+    margin: 20px 0px 5px 10px;
+    width: 30vw;
+    border: 2px solid rgb(117, 117, 117);
+    padding: 10px;
+    }
+
+    .botao > input{
+    padding: 10px;
+    background-color: rgb(95, 95, 95);
+    border-color: rgb(95, 95, 95);
+    border-radius: 20px;
+    margin: 5px 0px 0px 10px;
+    color: white;
+    font-weight: bold;
+    }
+
+    .botao > input:hover{
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exemplo de Formulário</h1>
+  <form action="cadastro.php">
+    <fieldset>
+      <legend>Sexo</legend>
+      <input type="radio" name="sexo" id="isxmas" value="M">
+      <label for="isxmas">Masculino</label><br>
+
+      <input type="radio" name="sexo" id="isxfem" value="F">
+      <label for="isxfem">Feminino</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Esportes favoritos</legend>
+      <input type="checkbox" name="bas" id="ibas"> 
+      <label for="ibas">Basqueste</label><br>
+      <input type="checkbox" name="fut" id="ifut"> 
+      <label for="ifut">Futebol</label><br>
+      <input type="checkbox" name="nat" id="inat"> 
+      <label for="inat">Natação</label><br>
+      <input type="checkbox" name="ten" id="iten"> 
+      <label for="iten">Tênis</label><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Quer receber notificações?</legend>
+      <input type="radio" name="not" id="is" value="S" checked>
+      <label for="is">Sim</label><br>
+
+      <input type="radio" name="not" id="in" value="N">
+      <label for="in">Não</label>
+    </fieldset>
+    <div class="botao">
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Limpar">
+    </div>
+  </form>
+</body>
+</html>
